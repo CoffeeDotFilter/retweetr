@@ -1,2 +1,15 @@
 <h1>much wow, you have logged in!</h1>
 {{authData}}
+
+
+<div id="tweets">
+	<ul>
+		{{#each tweets}}
+		<li>
+			<p>{{this.text}}</p>
+			<p>{{this.user}}</p>
+			<p>{{this.created_at}}</p>
+		</li>
+		{{/each}}
+	</ul>
+</div>
