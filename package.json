@@ -4,7 +4,7 @@
   "description": "A tinder style app for liking and retweeting tweets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./lib/server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "hapi": "^13.0.0",
     "inert": "^3.2.0",
     "redis": "^2.5.0-1",
+    "request": "^2.69.0",
     "vision": "^4.0.1"
   },
   "devDependencies": {
