@@ -1,0 +1,34 @@
+{
+  "name": "retweetr",
+  "version": "1.0.0",
+  "description": "A tinder style app for liking and retweeting tweets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoffeeDotFilter/retweetr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoffeeDotFilter/retweetr/issues"
+  },
+  "homepage": "https://github.com/CoffeeDotFilter/retweetr#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "env2": "^2.0.6",
+    "hammerjs": "^2.0.6",
+    "handlebars": "^4.0.5",
+    "hapi": "^13.0.0",
+    "inert": "^3.2.0",
+    "redis": "^2.5.0-1",
+    "vision": "^4.0.1"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "nodemon": "^1.9.1",
+    "tape": "^4.5.1"
+  }
+}
