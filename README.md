@@ -4,6 +4,8 @@
 
 Retweetr is a tinder style app for liking and retweeting tweets
 
+Check out the app on [www.retweetr.herokuapp.com](http://retweetr.herokuapp.com/)
+
 ### Why?
 
 Because we are learning how to implement Oauth with a 3rd party service, we'll be allowing users to login via their twitter accounts for this app. For gold standard security, we will be using JSON web tokens (JWTs) to authenticate our users
@@ -13,11 +15,9 @@ Because we are learning how to implement Oauth with a 3rd party service, we'll b
 We'll be building Retweetr using:
 
 + Node.js with Hapi - our server technology
-+ Redis - our database
 + Handlebars - to render our views
-+ Bcrypt - to encrypt our data
 + Authentication using Oauth2 and JWT
-+ Hammer.js - a gesture library for swiping tweetss
++ Hammer.js - a gesture library for swiping tweets
 
 The main feature of the app will be to show the user their news feed of most recent tweets (displayed as a card), which the user can swipe right to like the tweet, swipe up to retweet or swipe left to ignore it
 
@@ -54,3 +54,38 @@ We can use this data to render elements to the page and even store a history of 
 
 
 ![img_479213564](https://cloud.githubusercontent.com/assets/14013616/13633656/549045c0-e5e8-11e5-998c-e15bb58cd165.JPG)
+
+### Running the app locally and making changes
+
+To run the app locally, clone the repo using
+```shell
+$ git clone https://github.com/CoffeeDotFilter/retweetr.git
+```
+
+and run:
+
+```shell
+$ npm install
+```
+
+to install the dependencies.
+
+You'll also need a `config.env` file in your root directory with the following properties:
+
+```
+CONSUMER_KEY='your key goes here'
+CONSUMER_SECRET='your secret goes here'
+JWT_SECRET='choose any secret you like'
+```
+
+Sign up via twitter to register your own app to get a consumer key and consumer secret (make sure you enter a dummy link and callback url on the signup page)
+
+You can then run the app by starting the server with:
+
+```shell
+$ npm start
+```
+
+And visiting `http://localhost:4000`
+
+Feel free to suggest changes in an issue or submit a pull request!
