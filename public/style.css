@@ -75,16 +75,19 @@ Overlays-------*/
 
 .retweet-success {
   position: fixed;
+  display: block;
   width: 100vw;
   height: 100vh;
   background: rgba(52, 221, 49, 0.61);
+  opacity: 1;
   z-index: 100;
   top: 0;
   color: #fff;
   transition: 0.3s ease;
 }
 
-.retweet-success p {
+.retweet-success p,
+.favorite-success p {
   margin-top: 35vh;
   text-align: center;
   font-size: 1.4em;
@@ -95,6 +98,7 @@ Overlays-------*/
   width: 100vw;
   height: 100vh;
   background-color: rgba(221, 49, 49, 0.61);
+  opacity: 1;
   z-index: 100;
   top: 0;
   color: #fff;
@@ -102,7 +106,8 @@ Overlays-------*/
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 
