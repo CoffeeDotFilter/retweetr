@@ -1,2 +1,16 @@
-<h1>retweetr homepage</h1>
-<a href={{uri}}><button>Sign in with twitter</button></a>
+<h1>much wow, you have logged in!</h1>
+{{authData}}
+
+
+<div id="tweets">
+	<ul>
+		{{#each tweets}}
+		<li class="tweet" id={{this.id_str}}>
+			<div class="hiddenID" id={{this.id_str}}></div>
+			<p>{{this.text}}</p>
+			<p>{{this.user}}</p>
+			<p>{{this.created_at}}</p>
+		</li>
+		{{/each}}
+	</ul>
+</div>
