@@ -4,7 +4,7 @@
   "description": "A tinder style app for liking and retweeting tweets",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./lib/server.js"
+    "start": "node lib/server.js"
   },
   "repository": {
     "type": "git",
