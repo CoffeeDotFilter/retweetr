@@ -19,7 +19,6 @@ var twitterRequest = function(urlFragment, tweet) {
 	// console.log('sent request');
 };
 
-
 // var mcHammer = document.getElementById('hammer-test');
 // var testHammer = new Hammer(mcHammer, {});
 // testHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });

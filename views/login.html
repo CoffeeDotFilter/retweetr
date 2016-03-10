@@ -1,15 +1,18 @@
 <div class="login-tutorial">
 	<h2>How it works</h2>
 	<div class=swipe-div>
-		<p>Swipe right to like!</p> <img class="swipe" src="assets/swipe-right.png">
+		<p>Please login with Twitter</p>
+		<a href={{uri}}><img class="sign-in" src="assets/sign-in.png"></a>
 	</div>
-	<div class=swipe-div>
+	<div class=swipe-div id="swipe-left">
+		<p>Swipe left to get next tweet</p> <img class="swipe" src="assets/swipe-left.png">
+	</div>
+	<div class=swipe-div id="swipe-up">
 		<p>Swipe up to retweet!</p> <img class="swipe" src="assets/swipe-up.png">
 	</div>
-	<div class=swipe-div>
-		<p>Swipe left to get next tweet</p> <img class="swipe" src="assets/swipe-left.png">
+	<div class=swipe-div id="swipe-right">
+		<p>Swipe right to like!</p> <img class="swipe" src="assets/swipe-right.png">
 	</div>
 </div>
 
-
-<a href={{uri}}><img class="sign-in" src="assets/sign-in.png"></a>
+<script type="text/javascript" src="login.js"></script>
