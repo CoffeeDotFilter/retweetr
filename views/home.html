@@ -1,16 +1,13 @@
-<h1>much wow, you have logged in!</h1>
-{{authData}}
-
-
-<div id="tweets">
+<div class="tweet-container" style="">
 	<ul>
 		{{#each tweets}}
 		<li class="tweet" id={{this.id_str}}>
 			<div class="hiddenID" id={{this.id_str}}></div>
-			<p>{{this.text}}</p>
-			<p>{{this.user}}</p>
-			<p>{{this.created_at}}</p>
+			<p>{{{this.text}}}</p>
+			<p>{{{this.user}}}</p>
+			<p>{{{this.created_at}}}</p>
 		</li>
 		{{/each}}
 	</ul>
 </div>
+{{> footer}}

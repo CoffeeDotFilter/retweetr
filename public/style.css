@@ -1,3 +1,159 @@
 body {
-  background: #3fcdd1;
+	margin: 0;
+  background: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+
+
+/*#hammer-test {
+  background: url(mchammer.png);
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  margin: 3em auto;
+  transform: translate(0);
+  transition: 0.5s ease;
+}*/
+
+/*-------------
+Nav-------*/
+
+nav {
+  background: #FCF4A9;
+  height: 5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo-container {
+  width: 13em;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  padding-top: .6em;
+  width: 100%;
+}
+
+/*-------------
+Tweets-------*/
+
+.tweet-container {
+  margin: 19vh auto;
+  width: 100%;
+}
+
+#tweets ul {
+  position: relative;
+}
+
+.tweet {
+  position: absolute;
+  background-color: #27C2FF;
+  color: #fff;
+  border-radius: 1.1em;
+  /* width: 80%; */
+  margin: 6% 10%;
+  padding: 1em;
+  box-sizing: border-box;
+  list-style: none;
+  transition: 0.5s ease;
+  transform: translate(0);
+}
+
+
+/*-------------
+Footer-------*/
+
+footer {
+	background: #FCF4A9;
+	height: 5em;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer ul {
+  margin: 1em auto;
+  width: 22em;
+}
+
+.footer-logo{
+	display: inline;
+	padding: 0 2em 0 0;
+}
+
+.footer-settings {
+	width: 3em;
+}
+
+.footer-retweet {
+	width: 3em;
+	margin-bottom: 0.8em;
+}
+
+.footer-bin {
+	width: 3em;
+}
+
+.footer-like {
+	width: 3em;
+}
+
+/*LOGIN*/
+
+h2 {
+	font-style: normal;
+	font-size: 3em;
+}
+
+.sign-in {
+	display: block;
+	margin: 0 auto;
+	padding-top: 15em;
+}
+
+.login-tutorial {
+	width: 100%;
+	text-align: center;
+}
+
+.swipe {
+	width: 15em;
+	display: block;
+	margin: 0 auto;
+}
+
+.swipe-div {
+  background-color: #4DC0FF;
+  display: block;
+  margin: 3.1em auto;
+  width: 70%;
+  height: 22em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2.1em .5em;
+  border-radius: 1em;
+}
+
+p {
+	font-size: 2em;
+}
+
+@media (max-width: 550px) {
+  p {
+    font-size: 1.7em;
+  }
 }
