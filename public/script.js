@@ -1,6 +1,6 @@
 (function() {
 	var tweetArray = [].slice.call(document.getElementsByClassName('tweet'));
-	var retweetUrl = '/retweet?tweet_id=';
+	var retweetUrl = '/retweet?id=';
 	var favoriteUrl = '/favorite?id=';
 	var retweetOverlay = document.getElementById('retweet-success');
 	var favoriteOverlay = document.getElementById('favorite-success');
