@@ -81,6 +81,7 @@ Overlays-------*/
   z-index: 100;
   top: 0;
   color: #fff;
+  transition: 0.3s ease;
 }
 
 .retweet-success p {
@@ -97,6 +98,7 @@ Overlays-------*/
   z-index: 100;
   top: 0;
   color: #fff;
+  transition: 0.3s ease;
 }
 
 .hide {
