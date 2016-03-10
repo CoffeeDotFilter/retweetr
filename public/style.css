@@ -150,12 +150,13 @@ footer {
 h2 {
 	font-style: normal;
 	font-size: 3em;
+	margin-top: 2em;
 }
 
 .sign-in {
 	display: block;
 	margin: 0 auto;
-	padding-top: 15em;
+	padding-top: 1em;
 }
 
 .login-tutorial {
@@ -170,15 +171,18 @@ h2 {
 }
 
 .swipe-div {
-  background-color: #4DC0FF;
-  display: block;
-  margin: 3.1em auto;
+  background-color: #27C2FF;
+  color: #fff;
+  position: fixed;
+  margin: 6% 15%;
   width: 70%;
   height: 22em;
   text-align: center;
   box-sizing: border-box;
-  padding: 2.1em .5em;
-  border-radius: 1em;
+  padding: 1em;
+  border-radius: 1.1em;
+  transform: translate(0);
+  transition: 0.5s ease;
 }
 
 p {
