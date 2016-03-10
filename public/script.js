@@ -4,6 +4,10 @@
 	var favoriteUrl = '/favorite?id=';
 	var retweetOverlay = document.getElementById('retweet-success');
 	var favoriteOverlay = document.getElementById('favorite-success');
+	var retweetclick = document.getElementById('retweet-click');
+	var favclick = document.getElementById('favclick-click');
+	var deleteclick = document.getElementById('delete');
+
 
 	// Show retweet or favorite overlay for 2 seconds (on successful request)
 	function flashOverlay(successOverlay) {
@@ -64,3 +68,21 @@
 		setHammers(tweetHammer, tweet, retweetUrl, favoriteUrl);
 	});
 }());
+
+function footerretweet(retweetUrl, el) {
+retweetclick.addEventListener('click', function() {
+  twitterRequest(retweetUrl, el);
+});
+}
+
+function footerdelete(el) {
+deleteclick.addEventListener('click', function() {
+  removeTweet(el);
+});
+}
+
+function footerlike(favoriteUrl, el) {
+favclick.addEventListener('click', function() {
+  twitterRequest(favoriteUrl, el);
+});
+}
