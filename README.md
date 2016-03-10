@@ -1,5 +1,7 @@
 # Retweetr
 
+![retweetr](https://files.gitter.im/JackTierney/ThreeLoops/zMGl/retweetr-logo-01.png)
+
 Retweetr is a tinder style app for liking and retweeting tweets
 
 ### Why?
@@ -19,8 +21,14 @@ We'll be building Retweetr using:
 
 The main feature of the app will be to show the user their news feed of most recent tweets (displayed as a card), which the user can swipe right to like the tweet, swipe up to retweet or swipe left to ignore it
 
+These are the initial sketches:
+
 ![img_479213553](https://cloud.githubusercontent.com/assets/14013616/13633654/548e1444-e5e8-11e5-9c32-4dead481b452.JPG)
 ![img_479213559](https://cloud.githubusercontent.com/assets/14013616/13633655/548f1498-e5e8-11e5-85d0-14f5fa39d3f8.JPG)
+
+This is the high fidelity mockup:
+
+![retweetr5-01](https://cloud.githubusercontent.com/assets/14013616/13683885/23eb8a50-e701-11e5-8f2d-a8d392af8514.png)
 
 A strectch goal could be to filter the tweets via the user selecting followers they'd like to see tweets of
 
@@ -38,7 +46,7 @@ These tweets could be stored as hashes that could look something like:
   "Body": "@founderscoders you guys are the best",
   "Date": "09-03-2016",
   "Likes": "89",
-  "Rewteets": "120",
+  "Retweets": "120",
 }
 ```
 
