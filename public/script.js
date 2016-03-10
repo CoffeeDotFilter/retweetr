@@ -1,5 +1,4 @@
 var tweetArray = [].slice.call(document.getElementsByClassName('tweet'));
-console.log(tweetArray.id);
 
 var retweetUrl = '/retweet?tweet_id=';
 var favoriteUrl = '/favorite?id=';
@@ -62,7 +61,7 @@ function setHammers(hammerInstance, el, retweetUrl, favoriteUrl) {
 // two of the three listeners send twitter requests
 // the third just swipes left
 
-tweetArray.forEach(function(tweet) {
+tweetArray.forEach(function(tweet, index) {
 	var tweetHammer = new Hammer(tweet, {});
 	tweetHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	setHammers(tweetHammer, tweet, retweetUrl, favoriteUrl);
