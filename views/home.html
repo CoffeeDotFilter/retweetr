@@ -1,11 +1,17 @@
 <div class="tweet-container" style="">
+	<div class="retweet-success hide">
+		<p>Retweeted!</p>
+	</div>
+	<div class="favorite-success hide">
+		<p>Favourited!</p>
+	</div>
 	<ul>
 		{{#each tweets}}
 		<li class="tweet" id={{this.id_str}}>
 			<div class="hiddenID" id={{this.id_str}}></div>
+			<p>{{{this.screen_name}}}</p>
 			<p>{{{this.text}}}</p>
-			<p>{{{this.user}}}</p>
-			<p>{{{this.created_at}}}</p>
+			<p>{{{dateHelper this.created_at}}}</p>
 		</li>
 		{{/each}}
 	</ul>
