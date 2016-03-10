@@ -9,18 +9,6 @@ ul {
 }
 
 
-
-/*#hammer-test {
-  background: url(mchammer.png);
-  background-size: contain;
-  width: 200px;
-  height: 200px;
-  border: 2px solid;
-  margin: 3em auto;
-  transform: translate(0);
-  transition: 0.5s ease;
-}*/
-
 /*-------------
 Nav-------*/
 
@@ -75,16 +63,19 @@ Overlays-------*/
 
 .retweet-success {
   position: fixed;
+  display: block;
   width: 100vw;
   height: 100vh;
-  background: rgba(52, 221, 49, 0.61);
+  background: rgba(126, 255, 124, 0.61);
+  opacity: 1;
   z-index: 100;
   top: 0;
   color: #fff;
   transition: 0.3s ease;
 }
 
-.retweet-success p {
+.retweet-success p,
+.favorite-success p {
   margin-top: 35vh;
   text-align: center;
   font-size: 1.4em;
@@ -95,6 +86,7 @@ Overlays-------*/
   width: 100vw;
   height: 100vh;
   background-color: rgba(221, 49, 49, 0.61);
+  opacity: 1;
   z-index: 100;
   top: 0;
   color: #fff;
@@ -102,8 +94,15 @@ Overlays-------*/
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
+
+.retweet-icon,
+.favorite-icon {
+	text-align: center;
+}
+
 
 
 /*-------------
