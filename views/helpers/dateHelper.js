@@ -1,4 +1,5 @@
 const moment = require('moment');
 module.exports = (rawdate) => {
-  return moment(rawdate).format('MM do YYY');
-}
+  var date = new Date(rawdate).getTime();
+  return moment.utc(date).format('MMM do YY');
+};
