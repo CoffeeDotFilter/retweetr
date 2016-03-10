@@ -9,7 +9,17 @@ var twitterRequest = function(urlFragment, tweet) {
 	xhr.onreadystatechange = function() {
 		// console.log(xhr.status, xhr.readyState);
 		if (xhr.status === 200 && xhr.readyState === 4) {
-			tweet.innerHTML = xhr.responseText;
+			if (urlFragment.indexOf('retweet') > -1) {
+				retweetOverlay.classList.remove('hide');
+				setTimeout(function() {
+					retweetOverlay.classList.add('hide');
+				}, 2000);
+			} else {
+				favoriteOverlay.classList.remove('hide');
+				setTimeout(function() {
+					favoriteOverlay.classList.add('hide');
+				}, 2000);
+			}
 		}
 	};
 	var url = urlFragment + tweet.id;
@@ -19,14 +29,17 @@ var twitterRequest = function(urlFragment, tweet) {
 	// console.log('sent request');
 };
 
-// var mcHammer = document.getElementById('hammer-test');
-// var testHammer = new Hammer(mcHammer, {});
-// testHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+var retweetOverlay = document.getElementById('retweet-success');
+var favoriteOverlay = document.getElementById('favorite-success');
+
 
 function setHammers(hammerInstance, el, retweetUrl, favoriteUrl) {
 	hammerInstance.on('swiperight', function() {
 		twitterRequest(favoriteUrl, el);
 		el.style.transform = 'translateX(300px)';
+		setTimeout(function() {
+			el.style.display = 'none';
+		}, 3500);
 		console.log('swiped right!');
 	});
 

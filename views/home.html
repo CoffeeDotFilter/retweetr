@@ -1,8 +1,8 @@
 <div class="tweet-container" style="">
-	<div class="retweet-success hide">
+	<div class="retweet-success hide" id="retweet-success">
 		<p>Retweeted!</p>
 	</div>
-	<div class="favorite-success hide">
+	<div class="favorite-success hide" id="favorite-success">
 		<p>Favourited!</p>
 	</div>
 	<ul>
@@ -10,8 +10,8 @@
 		<li class="tweet" id={{this.id_str}}>
 			<div class="hiddenID" id={{this.id_str}}></div>
 			<p>{{{this.screen_name}}}</p>
-			<p>{{{this.text}}}</p>
 			<p>{{{dateHelper this.created_at}}}</p>
+			<p>{{{this.text}}}</p>
 		</li>
 		{{/each}}
 	</ul>
