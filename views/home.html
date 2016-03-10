@@ -1,8 +1,5 @@
-<h1>much wow, you have logged in!</h1>
-{{authData}}
-
-
-<div id="tweets">
+<div class="tweet-container" style="">
+  <div id="tweets">
 	<ul>
 		{{#each tweets}}
 		<li class="tweet" id={{this.id_str}}>
@@ -14,3 +11,6 @@
 		{{/each}}
 	</ul>
 </div>
+</div>
+
+{{> footer}}
