@@ -32,7 +32,7 @@ function setHammers(hammerInstance, el, retweetUrl, favoriteUrl) {
 	});
 
 	hammerInstance.on('swipeleft', function() {
-		el.style.transform = 'translateX(-300px)';
+		el.style.transform = 'translateX(-800px)';
 		console.log('swiped left!');
 	});
 
