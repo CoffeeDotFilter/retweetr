@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 (function() {
 	var tweetArray = [].slice.call(document.getElementsByClassName('tweet'));
 	var retweetUrl = '/retweet?tweet_id=';
 	var favoriteUrl = '/favorite?id=';
 	var retweetOverlay = document.getElementById('retweet-success');
 	var favoriteOverlay = document.getElementById('favorite-success');
+=======
+var tweetArray = [].slice.call(document.getElementsByClassName('tweet'));
+>>>>>>> master
 
 	var twitterRequest = function(urlFragment, tweet) {
 		var xhr = new XMLHttpRequest();
@@ -61,7 +65,6 @@
 	// for each tweet we create a new hammer instance (so the swipe event listeners can be added)
 	// create a new hammer instance for each
 	// pass this into the setHammers function
-
 	// two of the three listeners send twitter requests
 	// the third just swipes left
 
