@@ -5,6 +5,7 @@
 	var retweetOverlay = document.getElementById('retweet-success');
 	var favoriteOverlay = document.getElementById('favorite-success');
 
+	// Show retweet or favorite overlay for 2 seconds (on successful request)
 	function flashOverlay(successOverlay) {
 		successOverlay.classList.remove('hide');
 		setTimeout(function() {
@@ -12,6 +13,7 @@
 		}, 2000);
 	}
 
+	// Send request to /retweet or /favorite route
 	var twitterRequest = function(urlFragment, tweet) {
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function() {
@@ -28,12 +30,14 @@
 		xhr.send();
 	};
 
+	// Remove tweet after timeout (fired on swipes)
 	function removeTweet(el) {
 		setTimeout(function() {
 			el.style.display = 'none';
 		}, 500);
 	}
 
+	// Set hammer instances for right, left and up swipes, with transforms
 	function setHammers(hammerInstance, el, retweetUrl, favoriteUrl) {
 		hammerInstance.on('swiperight', function() {
 			twitterRequest(favoriteUrl, el);
@@ -53,12 +57,7 @@
 		});
 	}
 
-	// for each tweet we create a new hammer instance (so the swipe event listeners can be added)
-	// create a new hammer instance for each
-	// pass this into the setHammers function
-	// two of the three listeners send twitter requests
-	// the third just swipes left
-
+	// Apply new hammer and call setHammers for each tweet on the page 
 	tweetArray.forEach(function(tweet) {
 		var tweetHammer = new Hammer(tweet, {});
 		tweetHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
