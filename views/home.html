@@ -1,16 +1,15 @@
 <div class="tweet-container" style="">
   <div id="tweets">
-	<ul>
-		{{#each tweets}}
-		<li class="tweet" id={{this.id_str}}>
-			<div class="hiddenID" id={{this.id_str}}></div>
-			<p>{{this.text}}</p>
-			<p>{{this.user}}</p>
-			<p>{{this.created_at}}</p>
-		</li>
-		{{/each}}
-	</ul>
+		<ul>
+			{{#each tweets}}
+			<li class="tweet" id={{this.id_str}}>
+				<div class="hiddenID" id={{this.id_str}}></div>
+				<p>{{this.text}}</p>
+				<p>{{this.user}}</p>
+				<p>{{this.created_at}}</p>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
 </div>
-</div>
-
 {{> footer}}
