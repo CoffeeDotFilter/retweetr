@@ -1,3 +1,32 @@
-body {
-  background: #3fcdd1;
+
+
+
+
+
+
+
+
+
+/*****---------------
+test styling for tweets-----------****/
+
+.tweet {
+  border: 2px solid;
+  margin: 2em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  list-style: none;
+  transition: 0.5s ease;
+  transform: translate(0);
+}
+
+#hammer-test {
+  background: url(mchammer.png);
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  margin: 3em auto;
+  transform: translate(0);
+  transition: 0.5s ease;
 }
