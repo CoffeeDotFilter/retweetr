@@ -1,25 +1,25 @@
 <div class="tweet-container" style="">
-	<div class="retweet-success hide" id="retweet-success">
-		<p>Retweeted!</p>
-		<div class="retweet-icon">
-			<img src="assets/retweet-icon.png" alt="" />
-		</div>
-	</div>
-	<div class="favorite-success hide" id="favorite-success">
-		<p>Favourited!</p>
-		<div class="favorite-icon">
-			<img src="assets/like-icon.png" alt="" />
-		</div>
-	</div>
-	<ul>
-		{{#each tweets}}
-		<li class="tweet" id={{this.id_str}}>
-			<div class="hiddenID" id={{this.id_str}}></div>
-			<p>{{{this.screen_name}}}</p>
-			<p>{{{dateHelper this.created_at}}}</p>
-			<p>{{{this.text}}}</p>
-		</li>
-		{{/each}}
-	</ul>
+  <div class="retweet-success hide" id="retweet-success">
+    <p>Retweeted!</p>
+    <div class="retweet-icon">
+      <img src="assets/retweet-icon.png" alt=""/>
+    </div>
+  </div>
+  <div class="favorite-success hide" id="favorite-success">
+    <p>Favourited!</p>
+    <div class="favorite-icon">
+      <img src="assets/like-icon.png" alt=""/>
+    </div>
+  </div>
+  <ul>
+    {{#each tweets}}
+      <li class="tweet" id={{this.id_str}}>
+        <div class="hiddenID" id={{this.id_str}}></div>
+        <p>{{{this.screen_name}}}</p>
+        <p>{{{dateHelper this.created_at}}}</p>
+        <p>{{{this.text}}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </div>
 {{> footer}}
