@@ -198,7 +198,7 @@ h2 {
 }
 
 p {
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 @media (max-device-width: 700px) {
@@ -206,7 +206,7 @@ p {
     font-size: 18px;
   }
   .tweet {
-    min-height: 300px;
+    min-height: 350px;
   }
   .footer-menu {
     margin: 0.6em auto;

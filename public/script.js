@@ -5,9 +5,8 @@
 	var retweetOverlay = document.getElementById('retweet-success');
 	var favoriteOverlay = document.getElementById('favorite-success');
 	var retweetclick = document.getElementById('retweet-click');
-	var favclick = document.getElementById('favclick-click');
-	var deleteclick = document.getElementById('delete');
-
+	var favclick = document.getElementById('fav-click');
+	var deleteclick = document.getElementById('delete-click');
 
 	// Show retweet or favorite overlay for 2 seconds (on successful request)
 	function flashOverlay(successOverlay) {
@@ -30,11 +29,7 @@
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function () {
 			if (xhr.status === 200 && xhr.readyState === 4) {
-				if (urlFragment.indexOf('retweet') > -1) {
-					flashOverlay(retweetOverlay);
-				} else {
-					flashOverlay(favoriteOverlay);
-				}
+				toggleOverlay(urlFragment);
 			}
 		};
 		var url = urlFragment + tweet.id;
@@ -45,7 +40,8 @@
 	// Remove tweet after timeout (fired on swipes)
 	function removeTweet(el) {
 		setTimeout(function () {
-			el.style.display = 'none';
+			el.parentElement.removeChild(el);
+			// deleteEl = 'none';
 		}, 500);
 	}
 
@@ -75,22 +71,28 @@
 		tweetHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 		setHammers(tweetHammer, tweet, retweetUrl, favoriteUrl);
 	});
+
+	retweetclick.addEventListener('click', function() {
+		var tweetElements = document.getElementById('tweet-array');
+		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		deleteEl.style.transform = 'translateY(-100vh)';
+		twitterRequest(retweetUrl, deleteEl);
+		removeTweet(deleteEl);
+	});
+
+	deleteclick.addEventListener('click', function() {
+		var tweetElements = document.getElementById('tweet-array');
+		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		deleteEl.style.transform = 'translateX(-100vw)';
+		removeTweet(deleteEl);
+	});
+
+	favclick.addEventListener('click', function() {
+		var tweetElements = document.getElementById('tweet-array');
+		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		deleteEl.style.transform = 'translateX(100vw)';
+		twitterRequest(favoriteUrl, deleteEl);
+		removeTweet(deleteEl);
+	});
+
 }());
-
-// function footerretweet(retweetUrl, el) {
-// 	retweetclick.addEventListener('click', function() {
-// 	  twitterRequest(retweetUrl, el);
-// 	});
-// }
-
-// function footerdelete(el) {
-// 	deleteclick.addEventListener('click', function() {
-// 	  removeTweet(el);
-// 	});
-// }
-
-// function footerlike(favoriteUrl, el) {
-// 	favclick.addEventListener('click', function() {
-// 	  twitterRequest(favoriteUrl, el);
-// 	});
-// }
