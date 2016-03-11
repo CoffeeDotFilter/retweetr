@@ -205,8 +205,11 @@ p {
 
 @media (max-device-width: 700px) {
   p {
-    font-size: 0.6em;
+    font-size: 1em;
   }
+	.tweet {
+		min-height: 300px;
+	}
 	.footer-menu {
 		margin: 0.6em auto;
 	}
