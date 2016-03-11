@@ -17,6 +17,14 @@
 		}, 2000);
 	}
 
+	function toggleOverlay(url) {
+		if (url.indexOf('retweet') > -1) {
+			flashOverlay(retweetOverlay);
+		} else {
+			flashOverlay(favoriteOverlay);
+		}
+	}
+
 	// Send request to /retweet or /favorite route
 	var twitterRequest = function(urlFragment, tweet) {
 		var xhr = new XMLHttpRequest();
@@ -33,6 +41,11 @@
 		xhr.open('GET', url );
 		xhr.send();
 	};
+	// var twitterRequest = function(urlFragment, tweet) {
+	// 	var url = urlFragment + tweet.id;
+	// 	console.log(url);
+	// 	fetch(url, { method: 'GET' }).then(toggleOverlay(url));
+	// };
 
 	// Remove tweet after timeout (fired on swipes)
 	function removeTweet(el) {
@@ -61,7 +74,7 @@
 		});
 	}
 
-	// Apply new hammer and call setHammers for each tweet on the page 
+	// Apply new hammer and call setHammers for each tweet on the page
 	tweetArray.forEach(function(tweet) {
 		var tweetHammer = new Hammer(tweet, {});
 		tweetHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
