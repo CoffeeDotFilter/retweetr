@@ -131,7 +131,7 @@ footer {
 
 .footer-logo {
 	display: inline-block;
-	padding: 0 0 0 9%;
+	padding: 0 6%;
 }
 
 .footer-logo img {
@@ -141,6 +141,7 @@ footer {
 .footer-menu {
 	margin: 1.4em auto;
 	width: 70%;
+	max-width: 330px;
 }
 
 #settings-click,
