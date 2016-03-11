@@ -205,7 +205,7 @@ p {
 
 @media (max-device-width: 700px) {
   p {
-    font-size: 1em;
+    font-size: 9px;
   }
 	.tweet {
 		min-height: 300px;
