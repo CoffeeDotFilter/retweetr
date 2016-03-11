@@ -41,6 +41,7 @@ Tweets-------*/
 
 .tweet-container {
   margin: 16vh auto;
+	position: fixed;
   width: 100%;
 }
 
@@ -128,26 +129,29 @@ footer {
   width: 22em;
 }
 
-.footer-logo{
-	display: inline;
-	padding: 0 2em 0 0;
+.footer-logo {
+	display: inline-block;
+	padding: 0 0 0 9%;
 }
 
-.footer-settings {
-	width: 3em;
+.footer-logo img {
+	width: 100%;
 }
 
-.footer-retweet {
-	width: 3em;
+.footer-menu {
+	margin: 1.4em auto;
+	width: 70%;
+}
+
+#settings-click,
+#delete-click,
+#fav-click {
+	width: 10%;
+}
+
+#retweet-click {
+	width: 14%;
 	margin-bottom: 0.8em;
-}
-
-.footer-bin {
-	width: 3em;
-}
-
-.footer-like {
-	width: 3em;
 }
 
 /*LOGIN*/
@@ -194,8 +198,8 @@ p {
 	font-size: 2em;
 }
 
-@media (max-width: 550px) {
+@media (max-device-width: 700px) {
   p {
-    font-size: 1.7em;
+    font-size: 1em;
   }
 }
