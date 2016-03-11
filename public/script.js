@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	var tweetArray = [].slice.call(document.getElementsByClassName('tweet'));
 	var retweetUrl = '/retweet?id=';
 	var favoriteUrl = '/favorite?id=';
@@ -12,7 +12,7 @@
 	// Show retweet or favorite overlay for 2 seconds (on successful request)
 	function flashOverlay(successOverlay) {
 		successOverlay.classList.remove('hide');
-		setTimeout(function() {
+		setTimeout(function () {
 			successOverlay.classList.add('hide');
 		}, 2000);
 	}
@@ -26,9 +26,9 @@
 	}
 
 	// Send request to /retweet or /favorite route
-	var twitterRequest = function(urlFragment, tweet) {
+	var twitterRequest = function (urlFragment, tweet) {
 		var xhr = new XMLHttpRequest();
-		xhr.onreadystatechange = function() {
+		xhr.onreadystatechange = function () {
 			if (xhr.status === 200 && xhr.readyState === 4) {
 				if (urlFragment.indexOf('retweet') > -1) {
 					flashOverlay(retweetOverlay);
@@ -38,31 +38,31 @@
 			}
 		};
 		var url = urlFragment + tweet.id;
-		xhr.open('GET', url );
+		xhr.open('GET', url);
 		xhr.send();
 	};
 
 	// Remove tweet after timeout (fired on swipes)
 	function removeTweet(el) {
-		setTimeout(function() {
+		setTimeout(function () {
 			el.style.display = 'none';
 		}, 500);
 	}
 
 	// Set hammer instances for right, left and up swipes, with transforms
 	function setHammers(hammerInstance, el, retweetUrl, favoriteUrl) {
-		hammerInstance.on('swiperight', function() {
+		hammerInstance.on('swiperight', function () {
 			twitterRequest(favoriteUrl, el);
 			removeTweet(el);
 			el.style.transform = 'translateX(100vw)';
 		});
 
-		hammerInstance.on('swipeleft', function() {
+		hammerInstance.on('swipeleft', function () {
 			removeTweet(el);
 			el.style.transform = 'translateX(-100vw)';
 		});
 
-		hammerInstance.on('swipeup', function() {
+		hammerInstance.on('swipeup', function () {
 			removeTweet(el);
 			twitterRequest(retweetUrl, el);
 			el.style.transform = 'translateY(-100vh)';
@@ -70,7 +70,7 @@
 	}
 
 	// Apply new hammer and call setHammers for each tweet on the page
-	tweetArray.forEach(function(tweet) {
+	tweetArray.forEach(function (tweet) {
 		var tweetHammer = new Hammer(tweet, {});
 		tweetHammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 		setHammers(tweetHammer, tweet, retweetUrl, favoriteUrl);
