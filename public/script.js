@@ -72,24 +72,27 @@
 		setHammers(tweetHammer, tweet, retweetUrl, favoriteUrl);
 	});
 
-	retweetclick.addEventListener('click', function() {
+	// functions for buttons on footer
+	function currentTweet() {
 		var tweetElements = document.getElementById('tweet-array');
-		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		return tweetElements.lastChild.previousElementSibling;
+	}
+
+	retweetclick.addEventListener('click', function() {
+		var deleteEl = currentTweet();
 		deleteEl.style.transform = 'translateY(-100vh)';
 		twitterRequest(retweetUrl, deleteEl);
 		removeTweet(deleteEl);
 	});
 
 	deleteclick.addEventListener('click', function() {
-		var tweetElements = document.getElementById('tweet-array');
-		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		var deleteEl = currentTweet();
 		deleteEl.style.transform = 'translateX(-100vw)';
 		removeTweet(deleteEl);
 	});
 
 	favclick.addEventListener('click', function() {
-		var tweetElements = document.getElementById('tweet-array');
-		var deleteEl = tweetElements.lastChild.previousElementSibling;
+		var deleteEl = currentTweet();
 		deleteEl.style.transform = 'translateX(100vw)';
 		twitterRequest(favoriteUrl, deleteEl);
 		removeTweet(deleteEl);
