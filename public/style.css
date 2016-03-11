@@ -24,6 +24,9 @@ nav {
   width: 100%;
   z-index: 10;
 }
+  nav img {
+    user-select: none;
+  }
 
 .logo-container {
   width: 13em;
@@ -66,6 +69,7 @@ Tweets-------*/
   list-style: none;
   transition: 0.5s ease;
   transform: translate(0);
+  user-select: none;
 }
 
 
@@ -101,6 +105,11 @@ Overlays-------*/
   top: 0;
   color: #fff;
   transition: 0.3s ease;
+}
+
+.retweet-success img,
+.favorite-success img {
+  user-select: none;
 }
 
 .hide {
