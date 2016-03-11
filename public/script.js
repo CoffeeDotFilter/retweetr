@@ -77,20 +77,20 @@
 	});
 }());
 
-function footerretweet(retweetUrl, el) {
-retweetclick.addEventListener('click', function() {
-  twitterRequest(retweetUrl, el);
-});
-}
+// function footerretweet(retweetUrl, el) {
+// 	retweetclick.addEventListener('click', function() {
+// 	  twitterRequest(retweetUrl, el);
+// 	});
+// }
 
-function footerdelete(el) {
-deleteclick.addEventListener('click', function() {
-  removeTweet(el);
-});
-}
+// function footerdelete(el) {
+// 	deleteclick.addEventListener('click', function() {
+// 	  removeTweet(el);
+// 	});
+// }
 
-function footerlike(favoriteUrl, el) {
-favclick.addEventListener('click', function() {
-  twitterRequest(favoriteUrl, el);
-});
-}
+// function footerlike(favoriteUrl, el) {
+// 	favclick.addEventListener('click', function() {
+// 	  twitterRequest(favoriteUrl, el);
+// 	});
+// }
